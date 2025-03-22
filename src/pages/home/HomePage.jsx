@@ -1,10 +1,12 @@
 import React from 'react'
 import BlockBtn from '../../components/button/BlockBtn'
 import OutlineBtn from '../../components/button/OutlineBtn'
+import TestimonialCard from '../../components/card/TestimonialCard'
+import LeaveMessage from './LeaveMessage'
 
 const HomePage = () => {
   return (
-    <>
+    <div className='bg-[#F9FAF1]'>
         {/* QUICK WAY */}
         <section className='py-10 mb-15 lg:mb-0 lg:py-15'>
             <div className='flex items-center justify-between space-y-8 lg:space-y-48'>
@@ -37,7 +39,7 @@ const HomePage = () => {
         </section>
 
         {/* What we do */}
-        <section className='py-10 lg:py-15 justify-center space-y-20'>
+        <section className='py-10 lg:py-15 space-y-20'>
             <div className="intro space-y-4 text-center">
                 <h2 className='text-[0.9rem]'>WHAT WE DO</h2>
                 <h3 className='text-[#3D081B] uppercase'>We turn dreams into reality</h3>
@@ -46,27 +48,69 @@ const HomePage = () => {
            <div className='flex flex-wrap justify-center gap-8 px-10 space-y-10'>
 
                 <div className='w-full lg:w-[40%] space-y-2 flex flex-col items-center'>
-                    <div className='img w-[450px] h-[400px] rounded-2xl border'></div>
+                    <div className='img w-[300px] lg:w-[450px] h-[450px] rounded-2xl border'></div>
                     <div className="description space-y-4 text-center">
                         <h3 className=''>ESTATE DEVELOPMENT</h3>
                         <p className='text-center opacity-40' style={{lineHeight: '2'}}>Imagine waking up in your dream home or owning a property that secures your future. We bring visions to life with expertly designed estates, prime locations, and seamless property acquisition.</p>
                         <OutlineBtn text='LEARN MORE'/>
                     </div>
-                </div>{/* first */}
+                </div>
 
 
                 <div className='w-full lg:w-[40%] space-y-2 flex flex-col items-center'>
-                    <div className='img w-[450px] h-[450px] rounded-2xl border'></div>
+                    <div className='img w-[300px] lg:w-[450px] h-[450px] rounded-2xl border'></div>
                     <div className="description space-y-4 text-center">
                         <h3 className=''>HOTEL DEVELOPMENT</h3>
                         <p className='text-center opacity-40' style={{lineHeight: '2'}}>Experience hospitality at its finest! Whether you're looking to elevate your hotel's operations, enhance guest experiences, or maximize profitability, we provide expert solutions tailored to your needs.</p>
                         <OutlineBtn text='LEARN MORE'/>
                     </div>
-                </div>{/* second */}
+                </div>
            </div>
 
+           {/* <div className="flex justify-center">
+            <div className="grid lg:grid-cols-2 gap-10 justify-center items-center">
+
+                <div className='space-y-2 flex flex-col items-center'>
+                        <div className='img w-[300px] lg:w-[450px] h-[450px] rounded-2xl border'></div>
+                        <div className="description space-y-4 text-center">
+                            <h3 className=''>ESTATE DEVELOPMENT</h3>
+                            <p className='text-center opacity-40' style={{lineHeight: '2'}}>Imagine waking up in your dream home or owning a property that secures your future. We bring visions to life with expertly designed estates, prime locations, and seamless property acquisition.</p>
+                            <OutlineBtn text='LEARN MORE'/>
+                        </div>
+                </div>
+
+                <div className='space-y-2 flex flex-col items-center'>
+                        <div className='img w-[300px] lg:w-[450px] h-[450px] rounded-2xl border'></div>
+                        <div className="description space-y-4 text-center">
+                            <h3 className=''>HOTEL DEVELOPMENT</h3>
+                            <p className='text-center opacity-40' style={{lineHeight: '2'}}>Experience hospitality at its finest! Whether you're looking to elevate your hotel's operations, enhance guest experiences, or maximize profitability, we provide expert solutions tailored to your needs.</p>
+                            <OutlineBtn text='LEARN MORE'/>
+                        </div>
+                </div>
+
+            </div>
+           </div> */}
         </section>
-    </>
+
+        {/* testimonials */}
+        <section className='py-10 mb-20 lg:mb-0 lg:py-15 space-y-20'>
+            <div className="intro space-y-4 text-center">
+                <h2 className='text-[0.9rem]'>TESTIMONIALS</h2>
+                <h3 className='text-[#3D081B] uppercase'>TRUSTED BY OUR CUSTOMERS</h3>
+            </div>
+
+            <div className='flex justify-center'>
+                <div className='grid lg:grid-cols-3 gap-15 lg:gap-6'>
+                    <TestimonialCard/>
+                    <TestimonialCard/>
+                    <TestimonialCard/>
+                </div>
+            </div>
+        </section>
+
+        {/* leave a message */}
+        <LeaveMessage />
+    </div>
   )
 }
 

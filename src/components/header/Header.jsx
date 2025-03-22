@@ -6,10 +6,10 @@ const Header = () => {
     const [showMobile, setShowMobile] = useState(false)
   return (
     <>
-        <header className='bg-[#E1D7CA] py-4 px-6 relative h-20'>
+        <header className='bg-[#E1D7CA] py-4 px-6 relative h-24'>
             <nav className='flex py-4 md:gap-46 items-center max-sm:justify-between'>
                 <div className="brand">
-                    <Link>
+                    <Link to='/'>
                         Brand Logo
                     </Link>
                 </div>
@@ -25,16 +25,20 @@ const Header = () => {
                 </div>
                 <ul className='md:flex text-[#3D081B] gap-14 hidden'>
                     <li>
-                        <NavLink className='hover:border-b pb-2'>HOME</NavLink>
+                        <NavLink to='/' className={({isActive}) => isActive ? `pb-2 border-b-3` 
+                        : `hover:border-b pb-2`}>HOME</NavLink>
                     </li>
                     <li>
-                        <NavLink className='hover:border-b pb-2'>ABOUT US</NavLink>
+                        <NavLink to='/gallery' className={({isActive}) => isActive ? `pb-2 border-b-3` 
+                        : `hover:border-b pb-2`}>GALLERY</NavLink>
                     </li>
                     <li>
-                        <NavLink className='hover:border-b pb-2'>CONTACTS</NavLink>
+                        <NavLink to='/about' className={({isActive}) => isActive ? `pb-2 border-b-3` 
+                        : `hover:border-b pb-2`}>ABOUT US</NavLink>
                     </li>
                     <li>
-                        <NavLink className='hover:border-b pb-2'>GALLERY</NavLink>
+                        <NavLink to='/contact' className={({isActive}) => isActive ? `pb-2 border-b-3` 
+                        : `hover:border-b pb-2`}>CONTACT US</NavLink>
                     </li>
                 </ul>
             </nav>

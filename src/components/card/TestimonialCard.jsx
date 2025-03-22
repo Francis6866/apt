@@ -2,7 +2,7 @@ import React from 'react'
 
 const TestimonialCard = () => {
   return (
-    <div className='rounded-2xl shadow-2xl w-[300px] h-[300px] py-8 px-2 space-y-2'>
+    <div className='rounded-2xl shadow-lg lg:w-[300px] w-[350px] py-8 px-2 space-y-2'>
         <header className='flex gap-4'>
             <div className='w-[70px] h-[60px] border rounded-2xl'>
                 <img  alt="" className='w-full object-cover'/>
